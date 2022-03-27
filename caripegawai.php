@@ -1,32 +1,20 @@
 <?php include "../pat/template/header.php" ?>;
 
-	<?php 
-	if(isset($_GET['pesan'])){
-		$pesan = $_GET['pesan'];
-		if($pesan == "input"){
-			echo "<div class='alert alert-success' role='alert'>Data berhasil di tambah.</div>";
-		}else if($pesan == "update"){
-			echo "<div class='alert alert-success' role='alert'>Data berhasil di update.</div>";
-		}else if($pesan == "hapus"){
-			echo "<div class='alert alert-success' role='alert'>Data berhasil di hapus.</div>";
-		}
-	}
-	?>
-
 <div class="container">
 	<h5 class="text-center">Data Pegawai</h5>
 		<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a type="button" class="btn btn-primary" href="tambahpegawai.php">Tambah Data</a>
-    <form class="d-flex" action="caripegawai.php">
+    <?php 
+            if(isset($_GET['cari'])){
+              $cari = $_GET['cari'];?>
+    <p><b>Menampilkan Hasil Pencarian <?php echo $cari ?></b></p>
+    <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Cari dengan nama" aria-label="Search" name="cari">
       <button class="btn btn-outline-success" type="submit">Cari</button>
     </form>
-     <?php 
-            if(isset($_GET['cari'])){
-              $cari = $_GET['cari'];
-            }
-            ?>
+     
+           <?php } ?>
   </div>
 </nav>
 	
@@ -42,7 +30,12 @@
 			</thead>
 				<?php 
 				include "db.php";
-				$hboston = mysqli_query($boston, "select * from Pegawai");
+				if(isset($_GET['cari'])){
+				 $cari = $_GET['cari'];
+    		$hboston = mysqli_query($boston, "select * from pegawai where Nama like '%".$cari."%'");       
+  				}else{
+   			 $hboston = mysqli_query($boston, "select * from pegawai");   
+  					}
 				while($rboston = mysqli_fetch_array($hboston)){
 				?>
 					<tr>
