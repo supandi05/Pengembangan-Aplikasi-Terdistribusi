@@ -17,7 +17,7 @@
 	<h5 class="text-center">Data Gaji</h5>
 	<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a type="button" class="btn btn-primary" href="tambahgaji.php">Tambah Data</a>
+    <a type="button" class="btn btn-secondary" href="tambahgaji.php">Tambah Data</a>
     <form class="d-flex" action="carigaji.php">
       <input class="form-control me-2" type="search" placeholder="Cari dengan title" aria-label="Search" name="cari">
       <button class="btn btn-outline-success" type="submit">Cari</button>
@@ -46,7 +46,7 @@
 					<td><?php echo $rmontreal['0']; ?></td>
 					<td><?php echo $rmontreal['1']; ?></td>
 					<td>
-						<a type="button" class="btn btn-success" href="editgaji.php?Title=<?php echo $rmontreal['0']; ?>">Edit</a> |
+						<a type="button" class="btn btn-primary" href="editgaji.php?Title=<?php echo $rmontreal['0']; ?>">Edit</a> |
 						<a type="button" class="btn btn-danger" href="hapusgaji.php?Title=<?php echo $rmontreal['0']; ?>">Hapus</a>				
 					</td>
 				</tr>

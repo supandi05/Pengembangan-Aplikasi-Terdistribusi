@@ -17,7 +17,7 @@
 	<h5 class="text-center">Data Proyek</h5>
 	<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a type="button" class="btn btn-primary" href="tambahproyek.php">Tambah Data</a>
+    <a type="button" class="btn btn-secondary" href="tambahproyek.php">Tambah Data</a>
     <form class="d-flex" action="cariproyek.php">
       <input class="form-control me-2" type="search" placeholder="Cari dengan nama" aria-label="Search" name="cari">
       <button class="btn btn-outline-success" type="submit">Cari</button>
@@ -48,10 +48,8 @@
 					<td><?php echo $rparis['1']; ?></td>
 					<td><?php echo $rparis['2']; ?></td>
 					<td>
-						<a type="button" class="btn btn-success" href="editproyek.php?No=<?php echo $rparis['0']; ?>">Edit</a> |
+						<a type="button" class="btn btn-primary" href="editproyek.php?No=<?php echo $rparis['0']; ?>">Edit</a> |
 						<a type="button" class="btn btn-danger" href="hapusproyek.php?No=<?php echo $rparis['0']; ?>">Hapus</a>
-					</td>
-				</tr>
 				<?php } ?>
 		</table>
 </div>

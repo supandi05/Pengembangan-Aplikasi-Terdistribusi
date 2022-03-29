@@ -4,7 +4,7 @@
 	<h5 class="text-center">Data Pegawai</h5>
 		<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a type="button" class="btn btn-primary" href="tambahpegawai.php">Tambah Data</a>
+    <a type="button" class="btn btn-secondary" href="tambahpegawai.php">Tambah Data</a>
     <?php 
             if(isset($_GET['cari'])){
               $cari = $_GET['cari'];?>
@@ -43,10 +43,8 @@
 					<td><?php echo $rboston['1']; ?></td>
 					<td><?php echo $rboston['2']; ?></td>
 					<td>
-						<a type="button" class="btn btn-success" href="editpegawai.php?Nik=<?php echo $rboston['0']; ?>">Edit</a> |
-						<a type="button" class="btn btn-danger" href="hapuspegawai.php?Nik=<?php echo $rboston['0']; ?>">Hapus</a>			
-					</td>
-				</tr>
+						<a type="button" class="btn btn-primary" href="editpegawai.php?Nik=<?php echo $rboston['0']; ?>">Edit</a> |
+						<a type="button" class="btn btn-danger" href="hapuspegawai.php?Nik=<?php echo $rboston['0']; ?>">Hapus</a>
 				<?php } ?>
 		</table>
 

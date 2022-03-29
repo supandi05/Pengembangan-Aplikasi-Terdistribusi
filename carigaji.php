@@ -4,7 +4,7 @@
 	<h5 class="text-center">Data Gaji</h5>
 		<nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a type="button" class="btn btn-primary" href="tambahproyek.php">Tambah Data</a>
+    <a type="button" class="btn btn-secondary" href="tambahproyek.php">Tambah Data</a>
     <?php 
             if(isset($_GET['cari'])){
               $cari = $_GET['cari'];?>
@@ -41,7 +41,7 @@
 					<td><?php echo $rmontreal['0']; ?></td>
 					<td><?php echo $rmontreal['1']; ?></td>
 					<td>
-						<a type="button" class="btn btn-success" href="editgaji.php?Title=<?php echo $rmontreal['0']; ?>">Edit</a> |
+						<a type="button" class="btn btn-primary" href="editgaji.php?Title=<?php echo $rmontreal['0']; ?>">Edit</a> |
 						<a type="button" class="btn btn-danger" href="hapusgaji.php?Title=<?php echo $rmontreal['0']; ?>">Hapus</a>			
 					</td>
 				</tr>
